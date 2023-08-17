@@ -20,7 +20,7 @@ func main() {
 		"./public/views/contacts/index.html",
 		"./public/views/contacts/help.html",
 		"./public/views/contacts/settings.html",
-		"./public/views/contacts/header.html",
+		"./public/views/contacts/nav.html",
 		"./public/views/contacts/contacts.html",
 	)
 	if err != nil {

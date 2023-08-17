@@ -63,6 +63,16 @@
 
 
                 <p class="m-2">
+                    <label for="city">City</label>
+                    <input name="city" {{if .Contact}}value="{{ .Contact.City }}" {{end}} placeholder="City" />
+                    {{ if .Errors.city }}
+                    <div class="error">
+                        {{ .Errors.city }}
+                    </div>
+                    {{end}}
+                </p>
+
+                <p class="m-2">
                     <label for="addr1">Address Line 1</label>
                     <input name="addr1" {{if .Contact}}value="{{ .Contact.AddressLine1 }}" {{end}} placeholder="Address Line 1" />
                     {{ if .Errors.addr1 }}
@@ -71,18 +81,6 @@
                     </div>
                     {{end}}
                 </p>
-
-
-                <p class="m-2">
-                    <label for="city">Address Line 2</label>
-                    <input name="city" {{if .Contact}}value="{{ .Contact.City }}" {{end}} placeholder="City" />
-                    {{ if .Errors.city }}
-                    <div class="error">
-                            {{ .Errors.city }}
-                    </div>
-                    {{end}}
-                </p>
-
 
                 <p class="m-2">
                     <button type="submit">{{if .Existing}}Save{{else}}Create{{end}}</button>
