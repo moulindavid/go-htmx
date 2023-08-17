@@ -2,6 +2,9 @@ package database
 
 import (
 	"database/sql"
+
+	_ "github.com/libsql/libsql-client-go/libsql"
+	_ "modernc.org/sqlite"
 )
 
 var Db *sql.DB
@@ -36,8 +39,8 @@ func InitContacts(url string) error {
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT NOT NULL,
             email TEXT NOT NULL,
-            city TEXT NOT NULL,
             addressLine1 TEXT NOT NULL,
+            city TEXT NOT NULL,
             phone TEXT NOT NULL
         )`)
 
